@@ -1,0 +1,49 @@
+<!--
+  Generated template for the NewsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Notícias</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content *ngIf="this.news">
+
+  <div class="super-news" [ngStyle]="{'background-image': 'url(' + superNews.image + ')'}" (click)="goToUrl(superNews.url)">
+    <div class="super-news-title">
+      <ion-badge>AGRONEGÓCIO</ion-badge>
+      <h3 class="title">{{superNews.name}}</h3>
+    </div>
+  </div>
+  <div class="header-day">
+    <h6>ESSA SEMANA</h6>
+  </div>
+  <hr>
+
+  <div class="content-news">
+    <div class="news" *ngFor='let news of news' (click)="goToUrl(news.url)">
+      <ion-grid>
+        <ion-row>
+          <ion-col col-5>
+            <img src='{{news.image["contentUrl"]}}' alt="">
+          </ion-col>
+          <ion-col col-7>
+            <h1 class="news-title">
+              {{news.name}}
+            </h1>
+            <h6 class="news-subtitle">Por {{news.provider[0].name}}</h6>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <hr>
+    </div>
+  </div>
+
+
+</ion-content>
