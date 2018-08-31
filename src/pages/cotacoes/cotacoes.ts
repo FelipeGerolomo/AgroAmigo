@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
@@ -15,7 +16,18 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class CotacoesPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  cotacoes: any;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public http: HttpClient) {
+    this.getCotacoes();
+  }
+
+  getCotacoes() {
+    this.http.get("http://localhost:3000/")
+    .subscribe((data) => {
+      this.cotacoes = data;
+      console.log(this.cotacoes)
+    })
   }
 
   ionViewDidLoad() {

@@ -14,19 +14,22 @@
 
 
 <ion-content>
-  <ion-card>
+
+  <ion-card *ngFor="let cotacao of cotacoes" >
     <ion-card-content>
       <ion-grid>
         <ion-row>
           <ion-col col-6 class="produto">
-            <h4>Arroz</h4>
+            <h4>{{cotacao.produto}}</h4>
           </ion-col>
           <ion-col col-6 class="valor">
-            <h4>R$ 30,29</h4>
-            <h5>sc de 60kg</h5>
+            <h4>{{cotacao.preco}}</h4>
+            <h5>{{cotacao.unidade}}</h5>
           </ion-col>
         </ion-row>
       </ion-grid>
     </ion-card-content>
   </ion-card>
+
+
 </ion-content>
