@@ -25807,6 +25807,18 @@ page-news .content-news .news h6 {
 }
 
 page-news .news img {
+  color: transparent;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+page-news .img-news {
   width: 155px;
   height: 100px;
 }

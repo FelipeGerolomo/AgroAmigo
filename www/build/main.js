@@ -35,7 +35,7 @@ var CotacoesPage = /** @class */ (function () {
     }
     CotacoesPage.prototype.getCotacoes = function () {
         var _this = this;
-        this.http.get("http://localhost:3000/")
+        this.http.get("http://localhost:3000/cotacoes")
             .subscribe(function (data) {
             _this.cotacoes = data;
             console.log(_this.cotacoes);
@@ -46,11 +46,12 @@ var CotacoesPage = /** @class */ (function () {
     };
     CotacoesPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-cotacoes',template:/*ion-inline-start:"D:\AgroAmigo-master\AgroAmigo-master\src\pages\cotacoes\cotacoes.html"*/'<!--\n  Generated template for the CotacoesPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Cotações</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content>\n\n  <ion-card *ngFor="let cotacao of cotacoes" >\n    <ion-card-content>\n      <ion-grid>\n        <ion-row>\n          <ion-col col-6 class="produto">\n            <h4>{{cotacao.produto}}</h4>\n          </ion-col>\n          <ion-col col-6 class="valor">\n            <h4>{{cotacao.preco}}</h4>\n            <h5>{{cotacao.unidade}}</h5>\n          </ion-col>\n        </ion-row>\n      </ion-grid>\n    </ion-card-content>\n  </ion-card>\n\n\n</ion-content>\n'/*ion-inline-end:"D:\AgroAmigo-master\AgroAmigo-master\src\pages\cotacoes\cotacoes.html"*/,
+            selector: 'page-cotacoes',template:/*ion-inline-start:"C:\Unicesumar\Projetos\agroAmigo\src\pages\cotacoes\cotacoes.html"*/'<!--\n  Generated template for the CotacoesPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Cotações</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content>\n\n  <ion-card *ngFor="let cotacao of cotacoes" >\n    <ion-card-content>\n      <ion-grid>\n        <ion-row>\n          <ion-col col-6 class="produto">\n            <h4>{{cotacao.produto}}</h4>\n          </ion-col>\n          <ion-col col-6 class="valor">\n            <h4>{{cotacao.preco}}</h4>\n            <h5>{{cotacao.unidade}}</h5>\n          </ion-col>\n        </ion-row>\n      </ion-grid>\n    </ion-card-content>\n  </ion-card>\n\n\n</ion-content>\n'/*ion-inline-end:"C:\Unicesumar\Projetos\agroAmigo\src\pages\cotacoes\cotacoes.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["f" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["e" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["e" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["f" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["f" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]) === "function" && _c || Object])
     ], CotacoesPage);
     return CotacoesPage;
+    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=cotacoes.js.map
@@ -115,13 +116,12 @@ var NewsPage = /** @class */ (function () {
     };
     NewsPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-news',template:/*ion-inline-start:"D:\AgroAmigo-master\AgroAmigo-master\src\pages\news\news.html"*/'<!--\n  Generated template for the NewsPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Notícias</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content *ngIf="this.news">\n\n  <div class="super-news" [ngStyle]="{\'background-image\': \'url(\' + superNews.image + \')\'}" (click)="goToUrl(superNews.url)">\n    <div class="super-news-title">\n      <ion-badge>AGRONEGÓCIO</ion-badge>\n      <h3 class="title">{{superNews.name}}</h3>\n    </div>\n  </div>\n  <div class="header-day">\n    <h6>ESSA SEMANA</h6>\n  </div>\n  <hr>\n\n  <div class="content-news">\n    <div class="news" *ngFor=\'let news of news\' (click)="goToUrl(news.url)">\n      <ion-grid>\n        <ion-row>\n          <ion-col col-5>\n            <img src=\'{{news.image["contentUrl"]}}\' alt="">\n          </ion-col>\n          <ion-col col-7>\n            <h1 class="news-title">\n              {{news.name}}\n            </h1>\n            <h6 class="news-subtitle">Por {{news.provider[0].name}}</h6>\n          </ion-col>\n        </ion-row>\n      </ion-grid>\n      <hr>\n    </div>\n  </div>\n\n\n</ion-content>'/*ion-inline-end:"D:\AgroAmigo-master\AgroAmigo-master\src\pages\news\news.html"*/,
+            selector: 'page-news',template:/*ion-inline-start:"C:\Unicesumar\Projetos\agroAmigo\src\pages\news\news.html"*/'<!--\n  Generated template for the NewsPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Notícias</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content *ngIf="this.news">\n\n  <div class="super-news" [ngStyle]="{\'background-image\': \'url(\' + superNews.image + \')\'}" (click)="goToUrl(superNews.url)">\n    <div class="super-news-title">\n      <ion-badge>AGRONEGÓCIO</ion-badge>\n      <h3 class="title">{{superNews.name}}</h3>\n    </div>\n  </div>\n  <div class="header-day">\n    <h6>ESSA SEMANA</h6>\n  </div>\n  <hr>\n\n  <div class="content-news">\n    <div class="news" *ngFor=\'let news of news\' (click)="goToUrl(news.url)">\n      <ion-grid>\n        <ion-row>\n          <ion-col col-5>\n            <div class="img-news">\n              <img src=\'{{news.image["contentUrl"]}}\' alt="">\n            </div>\n          </ion-col>\n          <ion-col col-7>\n            <h1 class="news-title">\n              {{news.name}}\n            </h1>\n            <h6 class="news-subtitle">Por {{news.provider[0].name}}</h6>\n          </ion-col>\n        </ion-row>\n      </ion-grid>\n      <hr>\n    </div>\n  </div>\n\n\n</ion-content>'/*ion-inline-end:"C:\Unicesumar\Projetos\agroAmigo\src\pages\news\news.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["e" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["f" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["e" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["e" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["f" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["f" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]) === "function" && _c || Object])
     ], NewsPage);
     return NewsPage;
+    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=news.js.map
@@ -162,7 +162,7 @@ var WeatherPage = /** @class */ (function () {
     };
     WeatherPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-weather',template:/*ion-inline-start:"D:\AgroAmigo-master\AgroAmigo-master\src\pages\weather\weather.html"*/'<!--\n  Generated template for the WeatherPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Temperatura</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content>\n\n</ion-content>\n'/*ion-inline-end:"D:\AgroAmigo-master\AgroAmigo-master\src\pages\weather\weather.html"*/,
+            selector: 'page-weather',template:/*ion-inline-start:"C:\Unicesumar\Projetos\agroAmigo\src\pages\weather\weather.html"*/'<!--\n  Generated template for the WeatherPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Temperatura</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content>\n\n</ion-content>\n'/*ion-inline-end:"C:\Unicesumar\Projetos\agroAmigo\src\pages\weather\weather.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]])
     ], WeatherPage);
@@ -252,7 +252,7 @@ var TabsPage = /** @class */ (function () {
         this.tab3Root = __WEBPACK_IMPORTED_MODULE_3__weather_weather__["a" /* WeatherPage */];
     }
     TabsPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"D:\AgroAmigo-master\AgroAmigo-master\src\pages\tabs\tabs.html"*/'<ion-tabs>\n  <ion-tab [root]="tab1Root" tabTitle="Cotações" tabIcon="logo-usd"></ion-tab>\n  <ion-tab [root]="tab2Root" tabTitle="Notícias" tabIcon="paper"></ion-tab>\n  <ion-tab [root]="tab3Root" tabTitle="Temperatura" tabIcon="thermometer"></ion-tab>\n</ion-tabs>\n'/*ion-inline-end:"D:\AgroAmigo-master\AgroAmigo-master\src\pages\tabs\tabs.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"C:\Unicesumar\Projetos\agroAmigo\src\pages\tabs\tabs.html"*/'<ion-tabs>\n  <ion-tab [root]="tab1Root" tabTitle="Cotações" tabIcon="logo-usd"></ion-tab>\n  <ion-tab [root]="tab2Root" tabTitle="Notícias" tabIcon="paper"></ion-tab>\n  <ion-tab [root]="tab3Root" tabTitle="Temperatura" tabIcon="thermometer"></ion-tab>\n</ion-tabs>\n'/*ion-inline-end:"C:\Unicesumar\Projetos\agroAmigo\src\pages\tabs\tabs.html"*/
         }),
         __metadata("design:paramtypes", [])
     ], TabsPage);
@@ -402,7 +402,7 @@ var MyApp = /** @class */ (function () {
         });
     }
     MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"D:\AgroAmigo-master\AgroAmigo-master\src\app\app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"D:\AgroAmigo-master\AgroAmigo-master\src\app\app.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"C:\Unicesumar\Projetos\agroAmigo\src\app\app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"C:\Unicesumar\Projetos\agroAmigo\src\app\app.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
     ], MyApp);
@@ -437,7 +437,7 @@ var AboutPage = /** @class */ (function () {
     }
     AboutPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-about',template:/*ion-inline-start:"D:\AgroAmigo-master\AgroAmigo-master\src\pages\about\about.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      About\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"D:\AgroAmigo-master\AgroAmigo-master\src\pages\about\about.html"*/
+            selector: 'page-about',template:/*ion-inline-start:"C:\Unicesumar\Projetos\agroAmigo\src\pages\about\about.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      About\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"C:\Unicesumar\Projetos\agroAmigo\src\pages\about\about.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]])
     ], AboutPage);
@@ -472,7 +472,7 @@ var ContactPage = /** @class */ (function () {
     }
     ContactPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-contact',template:/*ion-inline-start:"D:\AgroAmigo-master\AgroAmigo-master\src\pages\contact\contact.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Contact\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n    <ion-list-header>Follow us on Twitter</ion-list-header>\n    <ion-item>\n      <ion-icon name="ionic" item-start></ion-icon>\n      @ionicframework\n    </ion-item>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"D:\AgroAmigo-master\AgroAmigo-master\src\pages\contact\contact.html"*/
+            selector: 'page-contact',template:/*ion-inline-start:"C:\Unicesumar\Projetos\agroAmigo\src\pages\contact\contact.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Contact\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n    <ion-list-header>Follow us on Twitter</ion-list-header>\n    <ion-item>\n      <ion-icon name="ionic" item-start></ion-icon>\n      @ionicframework\n    </ion-item>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"C:\Unicesumar\Projetos\agroAmigo\src\pages\contact\contact.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]])
     ], ContactPage);
@@ -507,7 +507,7 @@ var HomePage = /** @class */ (function () {
     }
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"D:\AgroAmigo-master\AgroAmigo-master\src\pages\home\home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>Home</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <h2>Welcome to Ionic!</h2>\n  <p>\n    This starter project comes with simple tabs-based layout for apps\n    that are going to primarily use a Tabbed UI.\n  </p>\n  <p>\n    Take a look at the <code>src/pages/</code> directory to add or change tabs,\n    update any existing page or create new pages.\n  </p>\n</ion-content>\n'/*ion-inline-end:"D:\AgroAmigo-master\AgroAmigo-master\src\pages\home\home.html"*/
+            selector: 'page-home',template:/*ion-inline-start:"C:\Unicesumar\Projetos\agroAmigo\src\pages\home\home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>Home</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <h2>Welcome to Ionic!</h2>\n  <p>\n    This starter project comes with simple tabs-based layout for apps\n    that are going to primarily use a Tabbed UI.\n  </p>\n  <p>\n    Take a look at the <code>src/pages/</code> directory to add or change tabs,\n    update any existing page or create new pages.\n  </p>\n</ion-content>\n'/*ion-inline-end:"C:\Unicesumar\Projetos\agroAmigo\src\pages\home\home.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]])
     ], HomePage);
