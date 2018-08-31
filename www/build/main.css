@@ -25822,3 +25822,47 @@ page-news .img-news {
   width: 155px;
   height: 100px;
 }
+
+page-weather .text-center {
+  text-align: center;
+}
+
+page-weather .city-weather {
+  text-align: center;
+  margin-bottom: 0;
+}
+
+page-weather .temp-weather {
+  text-align: center;
+  font-size: 80px;
+  margin: 0px;
+}
+
+page-weather .icon-weather {
+  font-size: 0.8em;
+}
+
+page-weather .desc-weather {
+  text-align: center;
+}
+
+page-weather .weather-prev {
+  text-align: center;
+}
+
+page-weather .weather-prev p {
+  margin: 10px 0px;
+}
+
+page-weather .weather-prev .col {
+  border-right: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+page-weather ion-row.weather-prev.row > ion-col:last-child {
+  border-right: 0px;
+}
+
+page-weather .weather-prev-title {
+  margin: 10px 0px;
+  text-align: center;
+}

@@ -23,7 +23,7 @@ export class CotacoesPage {
   }
 
   getCotacoes() {
-    this.http.get("http://localhost:3000/cotacoes")
+    this.http.get("https://cotacoes-api.herokuapp.com/")
     .subscribe((data) => {
       this.cotacoes = data;
       console.log(this.cotacoes)

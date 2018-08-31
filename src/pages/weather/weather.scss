@@ -1,3 +1,48 @@
 page-weather {
 
+    .text-center {
+        text-align: center;
+    }
+
+    .city-weather {
+        text-align: center;
+        margin-bottom: 0;
+    }
+
+    .temp-weather {
+        text-align: center;
+        font-size: 80px;
+        margin: 0px;
+    }
+
+    .icon-weather {
+        font-size: 0.8em;
+    }
+
+    .desc-weather {
+        text-align: center;
+    }
+
+    .weather-prev {
+        text-align: center;
+    }
+
+    .weather-prev p {
+        margin: 10px 0px;
+    }
+
+    .weather-prev .col {
+        border-right: 1px solid rgba(0, 0, 0, 0.08);
+    }
+
+    ion-row.weather-prev.row > ion-col:last-child {
+        border-right: 0px;
+    }
+
+    .weather-prev-title {
+        margin: 10px 0px;
+        text-align: center;
+    }
+    
 }
+
